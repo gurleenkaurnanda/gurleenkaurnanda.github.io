@@ -9,19 +9,34 @@
     /* Reset */
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
+    html, body {
+      height: 100%;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       line-height: 1.6;
-      color: #333;
-      background: #f9f9f9;
+      color: #2c2c2c;
+      display: flex;
+      flex-direction: column;
+      background: #fdfdfc;
+    }
+
+    /* Beachy color palette */
+    :root {
+      --sand: #f2e5d5;
+      --beach-grass: #c2b490;
+      --seafoam: #9fc5b6;
+      --ocean: #3a6f89;
+      --driftwood: #6b4f3f;
     }
 
     /* Header */
     header {
-      background: #0d47a1;
+      background: var(--ocean);
       color: white;
       text-align: center;
-      padding: 5rem 1rem 3rem;
+      padding: 4rem 1rem 2.5rem;
     }
     header h1 {
       font-size: 3rem;
@@ -31,6 +46,7 @@
       font-size: 1.3rem;
       font-weight: 400;
       margin-top: 0.5rem;
+      color: var(--sand);
     }
 
     /* Navigation */
@@ -38,23 +54,24 @@
       display: flex;
       justify-content: center;
       gap: 1.5rem;
-      padding: 1.5rem;
-      background: #ffffff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1rem;
+      background: var(--sand);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
     nav a {
       text-decoration: none;
-      color: #0d47a1;
+      color: var(--driftwood);
       font-weight: 600;
       transition: 0.2s;
-      padding: 0.3rem 0.6rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
     }
     nav a:hover {
-      background: #e3f2fd;
-      border-radius: 6px;
+      background: var(--seafoam);
+      color: white;
     }
 
     /* Hero Section */
@@ -63,43 +80,45 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      max-width: 900px;
+      max-width: 1000px;
       margin: 3rem auto;
       gap: 2rem;
       padding: 0 1rem;
+      flex: 1; /* pushes footer down */
     }
     .hero-text {
       flex: 1 1 400px;
     }
     .hero-text h2 {
-      color: #0d47a1;
+      color: var(--ocean);
       font-size: 2rem;
       margin-bottom: 1rem;
     }
     .hero-text p {
       font-size: 1.1rem;
-      color: #555;
+      color: #444;
     }
     .hero-photo {
-      flex: 0 0 200px;
-      height: 200px;
-      border-radius: 100px;
-      background: #ddd;
+      flex: 0 0 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: var(--beach-grass);
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #777;
+      color: white;
       font-weight: bold;
       font-size: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
 
     /* Footer */
     footer {
       text-align: center;
-      background: #0d47a1;
+      background: var(--driftwood);
       color: white;
-      padding: 2rem;
-      margin-top: 3rem;
+      padding: 1.5rem;
+      margin-top: auto; /* keeps footer at bottom */
     }
 
     @media (max-width: 600px) {
@@ -132,7 +151,7 @@
 <section class="hero">
   <div class="hero-text">
     <h2>Welcome!</h2>
-    <p>Hello! I am a mathematics graduate student exploring the intersection of <strong>representation theory, geometry, and physics</strong>. My research investigates algebraic and geometric structures that illuminate problems in modern mathematical physics.</p>
+    <p>Hello! I am <strong>Gurleenkaur Nanda</strong>, a mathematics graduate student exploring the intersection of <strong>representation theory, geometry, and physics</strong>. My research investigates algebraic and geometric structures that illuminate problems in modern mathematical physics.</p>
     <p>Learn more about my work, teaching, and talks by exploring the links above.</p>
   </div>
   <div class="hero-photo">Photo</div>
