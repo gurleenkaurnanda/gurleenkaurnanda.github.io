@@ -1,1 +1,0 @@
-# gurleenkaurnanda.github.io

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graduate Student in Mathematics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fafafa;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #0d47a1, #1976d2);
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem 4rem;
+      border-bottom: 4px solid #0b3c91;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin-top: 0.75rem;
+      opacity: 0.9;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 2rem;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      text-decoration: none;
+      color: #0d47a1;
+      font-weight: 600;
+      transition: color 0.2s, transform 0.2s;
+      padding: 0.3rem 0.6rem;
+    }
+    nav a:hover {
+      color: #1976d2;
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      max-width: 1000px;
+      margin: 4rem auto;
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+    .hero-text {
+      flex: 1 1 420px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    .hero-text h2 {
+      color: #0d47a1;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 1rem;
+    }
+    .hero-photo {
+      flex: 0 0 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Footer */
+    footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      background: #0d47a1;
+      color: white;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+    footer p {
+      margin: 0.3rem 0;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-photo {
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Graduate Student in Mathematics</h1>
+  <p>Representation Theory • Geometry • Physics</p>
+</header>
+
+<nav>
+  <a href="about.html">About</a>
+  <a href="research.html">Research</a>
+  <a href="teaching.html">Teaching</a>
+  <a href="talks.html">Talks</a>
+  <a href="cv.html">CV</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <h2>Welcome!</h2>
+    <p>Hello! I am a mathematics graduate student exploring the intersection of <strong>representation theory, geometry, and physics</strong>. My research investigates algebraic and geometric structures that illuminate problems in modern mathematical physics.</p>
+    <p>Learn more about my work, teaching, and talks by exploring the links above.</p>
+  </div>
+  <div class="hero-photo">Your Photo</div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Mathematics Graduate Student</p>
+  <p>Made with ❤ for mathematics and science</p>
+</footer>
+
+</body>
+</html>
