@@ -30,7 +30,7 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.4);
       position: relative;
       z-index: 100;
-      height: 70px; /* uniform height */
+      height: 70px;
       display: flex;
       align-items: center;
     }
@@ -113,25 +113,33 @@
     }
 
     footer {
+      flex-direction: column; /* stack items vertically */
       text-align: center;
       font-size: 0.9rem;
       color: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 10px 0;
+      height: auto; /* allow height to adjust */
     }
     .footer-line {
       font-size: 0.85rem;
       color: #ffffff;
+      margin-top: 4px;
     }
+
     .footer-credit {
-      text-align: right;
+      position: fixed;
+      bottom: 70px;   /* just above footer */
+      right: 20px;
       font-size: 0.75rem;
       font-style: italic;
       color: #1c2a46;
-      margin: 0 20px 6px 0;
-      position: relative;
-      z-index: 2;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 3px 6px;
+      border-radius: 4px;
+      z-index: 101;
     }
   </style>
 </head>
@@ -165,7 +173,7 @@
   </div>
 
   <footer>
-    © <span id="year"></span> Gurleenkaur Nanda
+    <div>© <span id="year"></span> Gurleenkaur Nanda</div>
     <div class="footer-line">made with ♥ for mathematics</div>
   </footer>
 
