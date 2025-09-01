@@ -48,6 +48,22 @@
     footer{background:#c7ddee; padding:20px; text-align:center; font-size:0.9rem; color:#5a3a1a;}
     .footer-line{margin-top:6px; font-size:0.85rem; color:#5a3a1a;}
   </style>
+<style>
+  ...
+  /* New style for background credit */
+  .background-credit {
+    position: fixed;
+    bottom: 50px;  /* places it just above the footer */
+    right: 15px;
+    font-size: 0.7rem;
+    color: #5a3a1a;
+    font-style: italic;
+    background: rgba(255,255,255,0.6); /* translucent box for readability */
+    padding: 3px 6px;
+    border-radius: 4px;
+  }
+</style>
+  
 </head>
 <body>
   <header>
@@ -75,7 +91,9 @@
       </div>
     </div>
   </section>
-
+  
+<div class="background-credit"> Background artwork: M. C. Escher, <em>Circle Limit III</em> </div>
+  
   <footer>
     © <span id="year"></span> Gurleenkaur Nanda
     <div class="footer-line">Made with ♥ for mathematics</div>
