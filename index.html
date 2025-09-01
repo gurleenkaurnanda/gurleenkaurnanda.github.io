@@ -22,7 +22,7 @@
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(255,255,255,0.7); /* translucent overlay */
+      background: rgba(255,255,255,0.7);
       z-index: 0;
     }
     header {
@@ -41,13 +41,20 @@
       display: flex; justify-content: space-between; align-items: center; padding: 18px 0;
     }
     .logo {
-      font-size: 1.3rem; font-weight: 600; color: #e0e9f9;
+      font-size: 1.9rem; /* slightly bigger */
+      font-weight: 600;
+      color: #ffffff;
     }
     .nav-links {
+      margin-left: auto;
       display: flex; gap: 20px;
     }
     .nav-links a {
-      color: #e0e9f9; text-decoration: none; font-weight: 500; transition: color 0.3s;
+      color: #e0e9f9;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 0.95rem;  /* smaller size */
+      transition: color 0.3s;
     }
     .nav-links a:hover {
       color: #ffffff;
@@ -79,7 +86,10 @@
       flex: 1;
     }
     .hero h1 {
-      font-size: 2.4rem; margin-bottom: 20px; color: #1c2a46;
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+      color: #1c2a46;
     }
     .hero p {
       max-width: 700px; font-size: 1.15rem; line-height: 1.7; color: #1c2a46;
@@ -105,7 +115,6 @@
       margin-top: 6px; font-size: 0.85rem; color: #ffffff;
     }
 
-    /* Credit above footer */
     .footer-credit {
       text-align: right;
       font-size: 0.75rem;
@@ -133,7 +142,7 @@
   <section class="hero container">
     <div class="hero-box">
       <div class="hero-text">
-        <h1>Hello!</h1>
+        <h1>Hello</h1>
         <p>I am a fourth-year PhD Student in Mathematics at Louisiana State University under the supervision of Prof. Anton Zeitlin and Prof. Scott Baldridge. I received a B.S.-M.S. degree in Mathematics with a minor in Physics from IISER Bhopal in 2022. I work in the intersection of representation theory, geometry, and physics. I am interested in the representation theory of supergroups, higher rank Thurston-Teichmüller theory, cluster algebras, and quiver varieties. You can contact me at gnanda1 "at" lsu "dot" edu.</p>
       </div>
       <div class="hero-photo">
@@ -142,14 +151,13 @@
     </div>
   </section>
 
-  <!-- Credit line just above footer -->
   <div class="footer-credit">
     Background artwork: M. C. Escher, <em>Circle Limit III</em>
   </div>
 
   <footer>
     © <span id="year"></span> Gurleenkaur Nanda
-    <div class="footer-line">made with ♥ for mathematics</div>
+    <div class="footer-line">Made with ♥ for mathematics</div>
   </footer>
 
   <script>
