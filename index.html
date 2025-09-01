@@ -7,62 +7,115 @@
   <meta name="description" content="Homepage of Gurleenkaur Nanda, mathematics graduate student exploring the intersection of representation theory, geometry, and physics." />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    body{
-      margin:0;
+    body {
+      margin: 0;
       font-family: Roboto, sans-serif;
+      color: #1c2a46;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
       background: url('https://upload.wikimedia.org/wikipedia/en/5/55/Escher_Circle_Limit_III.jpg') no-repeat center center fixed;
       background-size: cover;
-      color:#1c2a46;
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
+      position: relative;
     }
-    body::before{
-      content:"";
-      position:fixed;
-      top:0; left:0; right:0; bottom:0;
-      background:rgba(255,255,255,0.6);
-      z-index:-1;
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255,255,255,0.7); /* translucent overlay */
+      z-index: 0;
     }
-    header{
-      background:rgba(15,25,46,0.85);
-      box-shadow:0 2px 8px rgba(0,0,0,0.4);
-      position:sticky; top:0; z-index:100;
+    header {
+      background: rgba(15,25,46,0.85);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      position: sticky; top: 0; z-index: 100;
     }
-    .container{max-width:1100px; margin:0 auto; padding:0 20px;}
-    .nav{display:flex; justify-content:space-between; align-items:center; padding:18px 0;}
-    .logo{font-size:1.3rem; font-weight:600; color:#e0e9f9;}
-    .nav-links{display:flex; gap:20px;}
-    .nav-links a{color:#e0e9f9; text-decoration:none; font-weight:500; transition:color 0.3s;}
-    .nav-links a:hover{color:#ffffff;}
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .nav {
+      display: flex; justify-content: space-between; align-items: center; padding: 18px 0;
+    }
+    .logo {
+      font-size: 1.3rem; font-weight: 600; color: #e0e9f9;
+    }
+    .nav-links {
+      display: flex; gap: 20px;
+    }
+    .nav-links a {
+      color: #e0e9f9; text-decoration: none; font-weight: 500; transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: #ffffff;
+    }
 
-    .hero{flex:1; display:flex; flex-direction:row; align-items:center; justify-content:center; text-align:left; padding:80px 20px; gap:40px;}
-    .hero-box{background:rgba(255,255,255,0.85); padding:40px; border-radius:12px; display:flex; flex-direction:row; align-items:center; gap:40px;}
-    .hero-text{flex:1;}
-    .hero h1{font-size:2.4rem; margin-bottom:20px; color:#1c2a46;}
-    .hero p{max-width:700px; font-size:1.15rem; line-height:1.7; color:#1c2a46;}
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      padding: 80px 20px;
+      gap: 40px;
+    }
+    .hero-box {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 40px;
+      background: rgba(255,255,255,0.8);
+      padding: 30px;
+      border-radius: 10px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-text {
+      flex: 1;
+    }
+    .hero h1 {
+      font-size: 2.4rem; margin-bottom: 20px; color: #1c2a46;
+    }
+    .hero p {
+      max-width: 700px; font-size: 1.15rem; line-height: 1.7; color: #1c2a46;
+    }
 
-    .hero-photo{flex:0 0 250px;}
-    .hero-photo img{width:250px; height:auto; object-fit:cover; border-radius:8px;}
+    .hero-photo {
+      flex: 0 0 250px;
+    }
+    .hero-photo img {
+      width: 250px; height: 300px; object-fit: cover; border-radius: 8px;
+    }
 
-    footer{background:#c7ddee; padding:20px; text-align:center; font-size:0.9rem; color:#5a3a1a;}
-    .footer-line{margin-top:6px; font-size:0.85rem; color:#5a3a1a;}
+    footer {
+      background: rgba(15,25,46,0.85);
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #ffffff;
+      position: relative;
+      z-index: 2;
+    }
+    .footer-line {
+      margin-top: 6px; font-size: 0.85rem; color: #ffffff;
+    }
 
-  ...
-  /* New style for background credit */
-  background-credit {
-    position: fixed;
-    bottom: 50px;  /* places it just above the footer */
-    right: 15px;
-    font-size: 0.7rem;
-    color: #5a3a1a;
-    font-style: italic;
-    background: rgba(255,255,255,0.6); /* translucent box for readability */
-    padding: 3px 6px;
-    border-radius: 4px;
-  }
-</style>
-  
+    /* Credit above footer */
+    .footer-credit {
+      text-align: right;
+      font-size: 0.75rem;
+      font-style: italic;
+      color: #1c2a46;
+      margin: 0 20px 6px 0;
+      position: relative;
+      z-index: 2;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -81,25 +134,23 @@
     <div class="hero-box">
       <div class="hero-text">
         <h1>Hello!</h1>
-        <p>I am a fourth-year PhD Student in Mathematics at Louisiana State University under the supervision of Prof. Anton Zeitlin and Prof. Scott Baldridge. I received a B.S.-M.S. degree in Mathematics with a minor in Physics from IISER Bhopal in 2022.</p>
-        <p> I work in the intersection of representation theory, geometry, and physics. I am interested in the representation theory of supergroups, higher rank Thurston-Teichmüller theory, cluster algebras, and quiver varieties. </p>
-        <p>You can contact me at gnanda1 "at" lsu "dot" edu.</p>
+        <p>I am a fourth-year PhD Student in Mathematics at Louisiana State University under the supervision of Prof. Anton Zeitlin and Prof. Scott Baldridge. I received a B.S.-M.S. degree in Mathematics with a minor in Physics from IISER Bhopal in 2022. I work in the intersection of representation theory, geometry, and physics. I am interested in the representation theory of supergroups, higher rank Thurston-Teichmüller theory, cluster algebras, and quiver varieties. You can contact me at gnanda1 "at" lsu "dot" edu.</p>
       </div>
       <div class="hero-photo">
         <img src="image.jpeg" alt="Photo of Gurleenkaur Nanda">
       </div>
     </div>
   </section>
-  
-<footer>
+
+  <!-- Credit line just above footer -->
+  <div class="footer-credit">
+    Background artwork: M. C. Escher, <em>Circle Limit III</em>
+  </div>
+
+  <footer>
     © <span id="year"></span> Gurleenkaur Nanda
     <div class="footer-line">made with ♥ for mathematics</div>
   </footer>
-
-  <!-- Added background credit floating above footer -->
-  <div class="background-credit">
-    Background artwork: M. C. Escher, <em>Circle Limit III</em>
-  </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
