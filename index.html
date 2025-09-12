@@ -58,6 +58,7 @@
       display: flex;
       gap: 20px;
       justify-content: flex-end;
+      align-items: center;
     }
     .nav-links a {
       color: #e0e9f9;
@@ -68,6 +69,39 @@
     }
     .nav-links a:hover {
       color: #ffffff;
+    }
+
+    /* Dropdown styling */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown > a::after {
+      content: " ▼";
+      font-size: 0.7rem;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: rgba(15,25,46,0.95);
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      z-index: 200;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 10px 14px;
+      color: #e0e9f9;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .dropdown-content a:hover {
+      background: rgba(255,255,255,0.1);
+      color: #ffffff;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
 
     .hero {
@@ -121,7 +155,7 @@
       justify-content: center;
       align-items: center;
       padding: 10px 0;
-      height: auto; /* allow height to adjust */
+      height: auto;
     }
     .footer-line {
       font-size: 0.85rem;
@@ -150,7 +184,13 @@
       <div class="nav-links">
         <a href="#">CV</a>
         <a href="#">Research</a>
-        <a href="#">Seminars</a>
+        <div class="dropdown">
+          <a href="#">Seminars</a>
+          <div class="dropdown-content">
+            <a href="geometric-satake.html">Geometric Satake</a>
+            <!-- Add more seminar links here later -->
+          </div>
+        </div>
         <a href="#">Misc.</a>
       </div>
     </div>
