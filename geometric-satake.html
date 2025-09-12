@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Geometric Satake — Seminars</title>
-  <meta name="description" content="Seminar notes and materials on Geometric Satake." />
+  <meta name="description" content="Seminar page on the Geometric Satake equivalence by Gurleenkaur Nanda." />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: Roboto, sans-serif;
-      color: #1c2a46; /* same as homepage */
+      color: #1c2a46;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -59,7 +59,6 @@
       display: flex;
       gap: 20px;
       justify-content: flex-end;
-      align-items: center;
     }
     .nav-links a {
       color: #e0e9f9;
@@ -68,45 +67,11 @@
       font-size: 0.95rem;
       transition: color 0.3s;
     }
-    .nav-links a:hover,
-    .logo:hover {
+    .nav-links a:hover {
       color: #ffffff;
     }
 
-    /* Dropdown styling */
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    .dropdown > a::after {
-      content: " ▼";
-      font-size: 0.7rem;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background: rgba(15,25,46,0.95);
-      min-width: 180px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      border-radius: 4px;
-      z-index: 200;
-    }
-    .dropdown-content a {
-      display: block;
-      padding: 10px 14px;
-      color: #e0e9f9;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-    .dropdown-content a:hover {
-      background: rgba(255,255,255,0.1);
-      color: #ffffff;
-    }
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    main {
+    .content {
       flex: 1;
       display: flex;
       justify-content: center;
@@ -114,23 +79,35 @@
       padding: 80px 20px;
     }
     .content-box {
-      background: rgba(255,255,255,0.85);
+      max-width: 900px;
+      width: 100%;
       padding: 30px;
       border-radius: 10px;
-      max-width: 800px;
-      width: 100%;
-      color: #1c2a46; /* dark text, consistent with homepage */
+      position: relative;
+      z-index: 1;
+    }
+    .content-box::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255,255,255,0.8);
+      border-radius: 10px;
+      z-index: 0;
+    }
+    .content-box * {
+      position: relative;
+      z-index: 1;
+      color: #1c2a46; /* homepage text color */
     }
     .content-box h1 {
-      font-size: 2rem;
+      font-size: 1.8rem;
+      font-weight: 400;
       margin-bottom: 20px;
-      color: #1c2a46;
     }
-    .content-box p, .content-box ul {
-      font-size: 1.15rem; /* match homepage */
+    .content-box p {
+      font-size: 1.15rem;
       line-height: 1.7;
-      margin-bottom: 15px;
-      color: #1c2a46;
+      margin-bottom: 16px;
     }
 
     footer {
@@ -156,32 +133,19 @@
     <div class="container nav">
       <a href="index.html" class="logo">Gurleenkaur Nanda</a>
       <div class="nav-links">
-        <a href="index.html">CV</a>
+        <a href="#">CV</a>
         <a href="#">Research</a>
-        <div class="dropdown">
-          <a href="#">Seminars</a>
-          <div class="dropdown-content">
-            <a href="geometric-satake.html">Geometric Satake</a>
-            <!-- more seminars can be added here -->
-          </div>
-        </div>
+        <a href="#">Seminars</a>
         <a href="#">Misc.</a>
       </div>
     </div>
   </header>
 
-  <main>
+  <main class="content">
     <div class="content-box">
       <h1>Geometric Satake Seminar</h1>
-      <p>Welcome to the seminar page on Geometric Satake. Here you will find notes, references, and updates related to our study of the Geometric Satake equivalence.</p>
-      <p><strong>Topics Covered:</strong></p>
-      <ul>
-        <li>Affine Grassmannians</li>
-        <li>Perverse sheaves and intersection cohomology</li>
-        <li>Tensor categories and Tannakian formalism</li>
-        <li>Langlands dual groups</li>
-      </ul>
-      <p>Materials and detailed lecture notes will be added here as the seminar progresses.</p>
+      <p>This is a dedicated subpage for the Geometric Satake seminar. The Geometric Satake equivalence is a deep result relating the geometry of the affine Grassmannian to the representation theory of complex reductive groups.</p>
+      <p>Here, I will share notes, talks, and related resources from seminar activities.</p>
     </div>
   </main>
 
