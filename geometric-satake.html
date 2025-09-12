@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Geometric Satake — Gurleenkaur Nanda</title>
+  <meta name="description" content="Seminar page on Geometric Satake by Gurleenkaur Nanda." />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Roboto, sans-serif;
+      color: #1c2a46;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: url('https://upload.wikimedia.org/wikipedia/en/5/55/Escher_Circle_Limit_III.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255,255,255,0.7);
+      z-index: 0;
+    }
+    header, footer {
+      background: rgba(15,25,46,0.85);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      position: relative;
+      z-index: 100;
+      height: 70px;
+      display: flex;
+      align-items: center;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    .logo {
+      font-size: 1.9rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+    .nav-links {
+      margin-left: auto;
+      display: flex;
+      gap: 20px;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .nav-links a {
+      color: #e0e9f9;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    /* Dropdown styling */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown > a::after {
+      content: " ▼";
+      font-size: 0.7rem;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: rgba(15,25,46,0.95);
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      z-index: 200;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 10px 14px;
+      color: #e0e9f9;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .dropdown-content a:hover {
+      background: rgba(255,255,255,0.1);
+      color: #ffffff;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      padding: 80px 20px;
+    }
+    .content-box {
+      background: rgba(255,255,255,0.8);
+      padding: 30px;
+      border-radius: 10px;
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .content h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+      color: #1c2a46;
+    }
+    .content p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      color: #1c2a46;
+    }
+
+    footer {
+      flex-direction: column;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+      height: auto;
+    }
+    .footer-line {
+      font-size: 0.85rem;
+      color: #ffffff;
+      margin-top: 4px;
+    }
+    .footer-credit {
+      position: fixed;
+      bottom: 70px;
+      right: 20px;
+      font-size: 0.75rem;
+      font-style: italic;
+      color: #1c2a46;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 3px 6px;
+      border-radius: 4px;
+      z-index: 101;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">Gurleenkaur Nanda</div>
+      <div class="nav-links">
+        <a href="index.html">CV</a>
+        <a href="index.html">Research</a>
+        <div class="dropdown">
+          <a href="#">Seminars</a>
+          <div class="dropdown-content">
+            <a href="geometric-satake.html">Geometric Satake</a>
+            <!-- Add more seminar links here later -->
+          </div>
+        </div>
+        <a href="index.html">Misc.</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="content container">
+    <div class="content-box">
+      <h1>Geometric Satake Seminar</h1>
+      <p>
+        This page is dedicated to the <strong>Geometric Satake</strong> seminar.
+        Here you can add details about upcoming sessions, notes, references, or slides.
+      </p>
+      <p>
+        You might include the seminar schedule, links to resources, or summaries of talks here.
+      </p>
+    </div>
+  </section>
+
+  <div class="footer-credit">
+    Background artwork: M. C. Escher, <em>Circle Limit III</em>
+  </div>
+
+  <footer>
+    <div>© <span id="year"></span> Gurleenkaur Nanda</div>
+    <div class="footer-line">Made with ♥ for Mathematics</div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
