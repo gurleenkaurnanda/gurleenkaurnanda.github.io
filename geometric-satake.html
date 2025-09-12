@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Geometric Satake — Gurleenkaur Nanda</title>
-  <meta name="description" content="Seminar page on Geometric Satake by Gurleenkaur Nanda." />
+  <title>Geometric Satake — Seminars</title>
+  <meta name="description" content="Seminar notes and materials on Geometric Satake." />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     body {
@@ -104,35 +104,29 @@
       display: block;
     }
 
-    .content {
+    main {
       flex: 1;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: flex-start;
-      justify-content: flex-start;
-      text-align: left;
       padding: 80px 20px;
     }
     .content-box {
-      background: rgba(255,255,255,0.8);
+      background: rgba(255,255,255,0.85);
       padding: 30px;
       border-radius: 10px;
-      position: relative;
-      z-index: 1;
-      max-width: 900px;
-      margin: 0 auto;
+      max-width: 800px;
+      width: 100%;
     }
-    .content h1 {
+    .content-box h1 {
       font-size: 2rem;
-      font-weight: 500;
       margin-bottom: 20px;
       color: #1c2a46;
     }
-    .content p {
+    .content-box p {
       font-size: 1.1rem;
       line-height: 1.7;
-      margin-bottom: 16px;
-      color: #1c2a46;
+      margin-bottom: 15px;
     }
 
     footer {
@@ -151,18 +145,6 @@
       color: #ffffff;
       margin-top: 4px;
     }
-    .footer-credit {
-      position: fixed;
-      bottom: 70px;
-      right: 20px;
-      font-size: 0.75rem;
-      font-style: italic;
-      color: #1c2a46;
-      background: rgba(255, 255, 255, 0.6);
-      padding: 3px 6px;
-      border-radius: 4px;
-      z-index: 101;
-    }
   </style>
 </head>
 <body>
@@ -171,35 +153,33 @@
       <div class="logo">Gurleenkaur Nanda</div>
       <div class="nav-links">
         <a href="index.html">CV</a>
-        <a href="index.html">Research</a>
+        <a href="#">Research</a>
         <div class="dropdown">
           <a href="#">Seminars</a>
           <div class="dropdown-content">
             <a href="geometric-satake.html">Geometric Satake</a>
-            <!-- Add more seminar links here later -->
+            <!-- more seminars can be added here -->
           </div>
         </div>
-        <a href="index.html">Misc.</a>
+        <a href="#">Misc.</a>
       </div>
     </div>
   </header>
 
-  <section class="content container">
+  <main>
     <div class="content-box">
       <h1>Geometric Satake Seminar</h1>
-      <p>
-        This page is dedicated to the <strong>Geometric Satake</strong> seminar.
-        Here you can add details about upcoming sessions, notes, references, or slides.
-      </p>
-      <p>
-        You might include the seminar schedule, links to resources, or summaries of talks here.
-      </p>
+      <p>Welcome to the seminar page on Geometric Satake. Here you will find notes, references, and updates related to our study of the Geometric Satake equivalence.</p>
+      <p><strong>Topics Covered:</strong></p>
+      <ul>
+        <li>Affine Grassmannians</li>
+        <li>Perverse sheaves and intersection cohomology</li>
+        <li>Tensor categories and Tannakian formalism</li>
+        <li>Langlands dual groups</li>
+      </ul>
+      <p>Materials and detailed lecture notes will be added here as the seminar progresses.</p>
     </div>
-  </section>
-
-  <div class="footer-credit">
-    Background artwork: M. C. Escher, <em>Circle Limit III</em>
-  </div>
+  </main>
 
   <footer>
     <div>© <span id="year"></span> Gurleenkaur Nanda</div>
@@ -211,3 +191,4 @@
   </script>
 </body>
 </html>
+
