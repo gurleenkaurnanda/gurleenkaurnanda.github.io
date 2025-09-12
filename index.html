@@ -88,6 +88,7 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       border-radius: 4px;
       z-index: 200;
+      flex-direction: column;
     }
     .dropdown-content a {
       display: block;
@@ -100,8 +101,26 @@
       background: rgba(255,255,255,0.1);
       color: #ffffff;
     }
-    .dropdown:hover .dropdown-content {
-      display: block;
+
+    /* Show dropdown on hover (desktop only) */
+    @media (min-width: 769px) {
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    }
+
+    /* Hamburger button */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: #ffffff;
+      border-radius: 2px;
     }
 
     .hero {
@@ -147,7 +166,7 @@
     }
 
     footer {
-      flex-direction: column; /* stack items vertically */
+      flex-direction: column;
       text-align: center;
       font-size: 0.9rem;
       color: #ffffff;
@@ -165,7 +184,7 @@
 
     .footer-credit {
       position: fixed;
-      bottom: 70px;   /* just above footer */
+      bottom: 70px;
       right: 20px;
       font-size: 0.75rem;
       font-style: italic;
@@ -175,20 +194,113 @@
       border-radius: 4px;
       z-index: 101;
     }
+
+    /* -------------------------
+       RESPONSIVE STYLES
+    ------------------------- */
+    @media (max-width: 768px) {
+      header, footer {
+        height: auto;
+        padding: 12px 0;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(15,25,46,0.95);
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 15px;
+        border-radius: 6px;
+        gap: 12px;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links a {
+        font-size: 1rem;
+      }
+
+      /* Mobile dropdown toggle */
+      .dropdown-content {
+        position: static;
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding-left: 10px;
+      }
+      .dropdown-content a {
+        padding: 8px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 1.3rem;
+      }
+
+      .hero {
+        flex-direction: column;
+        padding: 40px 15px;
+        gap: 20px;
+        text-align: center;
+      }
+
+      .hero-box {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+      }
+
+      .hero h1 {
+        font-size: 1.3rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      .hero-photo img {
+        width: 150px;
+        height: 190px;
+      }
+
+      .footer-credit {
+        position: static;
+        margin-top: 10px;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
       <div class="logo">Gurleenkaur Nanda</div>
-      <div class="nav-links">
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="nav-links" id="navLinks">
         <a href="#">CV</a>
         <a href="#">Research</a>
         <div class="dropdown">
-          <a href="#">Seminars</a>
+          <a href="javascript:void(0)" onclick="toggleDropdown(event)">Seminars</a>
           <div class="dropdown-content">
             <a href="geometric-satake.html">Geometric Satake</a>
-            <!-- Add more seminar links here later -->
           </div>
         </div>
         <a href="#">Misc.</a>
@@ -221,6 +333,17 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    function toggleDropdown(event) {
+      event.preventDefault();
+      const dropdownContent = event.target.nextElementSibling;
+      dropdownContent.style.display =
+        dropdownContent.style.display === "block" ? "none" : "block";
+    }
   </script>
 </body>
 </html>
