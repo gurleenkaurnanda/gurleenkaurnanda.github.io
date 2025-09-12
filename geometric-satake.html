@@ -10,7 +10,7 @@
     body {
       margin: 0;
       font-family: Roboto, sans-serif;
-      color: #1c2a46;
+      color: #1c2a46; /* same as homepage */
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -52,6 +52,7 @@
       font-size: 1.9rem;
       font-weight: 600;
       color: #ffffff;
+      text-decoration: none; /* remove underline */
     }
     .nav-links {
       margin-left: auto;
@@ -67,7 +68,8 @@
       font-size: 0.95rem;
       transition: color 0.3s;
     }
-    .nav-links a:hover {
+    .nav-links a:hover,
+    .logo:hover {
       color: #ffffff;
     }
 
@@ -117,16 +119,18 @@
       border-radius: 10px;
       max-width: 800px;
       width: 100%;
+      color: #1c2a46; /* dark text, consistent with homepage */
     }
     .content-box h1 {
       font-size: 2rem;
       margin-bottom: 20px;
       color: #1c2a46;
     }
-    .content-box p {
-      font-size: 1.1rem;
+    .content-box p, .content-box ul {
+      font-size: 1.15rem; /* match homepage */
       line-height: 1.7;
       margin-bottom: 15px;
+      color: #1c2a46;
     }
 
     footer {
@@ -149,23 +153,22 @@
 </head>
 <body>
   <header>
-  <div class="container nav">
-    <a href="index.html" class="logo">Gurleenkaur Nanda</a>
-    <div class="nav-links">
-      <a href="index.html">CV</a>
-      <a href="#">Research</a>
-      <div class="dropdown">
-        <a href="#">Seminars</a>
-        <div class="dropdown-content">
-          <a href="geometric-satake.html">Geometric Satake</a>
-          <!-- more seminars can be added here -->
+    <div class="container nav">
+      <a href="index.html" class="logo">Gurleenkaur Nanda</a>
+      <div class="nav-links">
+        <a href="index.html">CV</a>
+        <a href="#">Research</a>
+        <div class="dropdown">
+          <a href="#">Seminars</a>
+          <div class="dropdown-content">
+            <a href="geometric-satake.html">Geometric Satake</a>
+            <!-- more seminars can be added here -->
+          </div>
         </div>
+        <a href="#">Misc.</a>
       </div>
-      <a href="#">Misc.</a>
     </div>
-  </div>
-</header>
-
+  </header>
 
   <main>
     <div class="content-box">
